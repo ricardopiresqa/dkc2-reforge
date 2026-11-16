@@ -1,0 +1,70 @@
+{
+  "source_commit": "5f3098e3bfc37e8f26bde9428436b4d4499d1d50",
+  "license": "MIT",
+  "budget_brl": 0,
+  "archive_sha256": "06473eccf71e6265aa61084c1f31a026073375bb765015bad233ef3c9848913e",
+  "native_source_files": [
+    {
+      "path": "LICENSE.md",
+      "bytes": 1090,
+      "sha256": "6c608bf4e37f020ca7a783100f3fdf3f8c6a4a152d4cf1782deb58c02239623b"
+    },
+    {
+      "path": "screenshot/api/screenshot.script_api",
+      "bytes": 6554,
+      "sha256": "7be2da847639f62dcf064489d1993356d4b7f71b100bd5c3d5f98bf4b07047f9"
+    },
+    {
+      "path": "screenshot/ext.manifest",
+      "bytes": 20,
+      "sha256": "bf0f384f87d6c66a7b53c291a5e87a3b47d842f3980503714d003e3578c4f17a"
+    },
+    {
+      "path": "screenshot/include/fpng.h",
+      "bytes": 6530,
+      "sha256": "f25d0be21999a9341d8be52820e4393c28c89d5cd89b75885e8b99864d56a023"
+    },
+    {
+      "path": "screenshot/src/fpng.cpp",
+      "bytes": 118316,
+      "sha256": "e4c1ebf1eb2d178427bd6c65523edf9ff4934689705c3378da0ca5930a45f2b7"
+    },
+    {
+      "path": "screenshot/src/screenshot.cpp",
+      "bytes": 1758,
+      "sha256": "9005c02962a821435e570fa0c212783fd6788418f4bdbed53ac3e9bbe65525f3"
+    },
+    {
+      "path": "screenshot/src/screenshot.h",
+      "bytes": 426,
+      "sha256": "595987763c47e32884e74f6a772e2972a78a720ff08d3f53246949b192e739e2"
+    },
+    {
+      "path": "screenshot/src/screenshot_debug_webserver.cpp",
+      "bytes": 10795,
+      "sha256": "e5f5cff27ee80d0ef6db3afb6f5bdfae73b29404e3e0c217d627a5e2f8be9d81"
+    },
+    {
+      "path": "screenshot/src/screenshot_debug_webserver.h",
+      "bytes": 758,
+      "sha256": "8c6bb7e331ad9745a60e693b97f0a1384fd58451d08c340221c2744b44077424"
+    },
+    {
+      "path": "screenshot/src/screenshot_html.cpp",
+      "bytes": 4567,
+      "sha256": "7452ac3903d7254819144d7d0a54a3c6579ba70e0bb2c275e1635220e3ac1026"
+    },
+    {
+      "path": "screenshot/src/screenshot_opengl.cpp",
+      "bytes": 7435,
+      "sha256": "a7a5c1d7d47015220e27ad31324623ffbe584d966a020225244c503d05404ca2"
+    }
+  ],
+  "excluded": [
+    "ROM",
+    "extracted assets",
+    "game Lua/scenes",
+    "private signing keys"
+  ],
+  "status": "staged; source review required before upload"
+}

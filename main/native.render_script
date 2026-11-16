@@ -1,0 +1,39 @@
+-- Native SNES playfield, integer upscale and black letterboxing.
+local WIDTH, HEIGHT = 256, 224
+
+function init(self)
+  self.tiles = render.predicate({ "tile" })
+  self.gui = render.predicate({ "gui" })
+  self.text = render.predicate({ "debug_text" })
+  self.labels = render.predicate({ "text" })  -- title/menu labels (main/fonts/menu.font)
+  self.projection = vmath.matrix4_orthographic(0, WIDTH, 0, HEIGHT, -1, 1)
+end
+
+function update(self)
+  local width, height = render.get_window_width(), render.get_window_height()
+  if width <= 0 or height <= 0 then return end
+  local scale = math.max(1, math.floor(math.min(width / WIDTH, height / HEIGHT)))
+  local view_w, view_h = WIDTH * scale, HEIGHT * scale
+  render.set_viewport(0, 0, width, height)
+  render.set_depth_mask(true)
+  render.clear({ [graphics.BUFFER_TYPE_COLOR0_BIT] = vmath.vector4(0, 0, 0, 1),
+                 [graphics.BUFFER_TYPE_DEPTH_BIT] = 1 })
+  render.set_viewport(math.floor((width - view_w) / 2), math.floor((height - view_h) / 2), view_w, view_h)
+  render.set_view(vmath.matrix4())
+  render.set_projection(self.projection)
+  render.enable_state(graphics.STATE_BLEND)
+  render.set_blend_func(graphics.BLEND_FACTOR_SRC_ALPHA, graphics.BLEND_FACTOR_ONE_MINUS_SRC_ALPHA)
+  render.disable_state(graphics.STATE_DEPTH_TEST)
+  render.set_depth_mask(false)
+  render.draw(self.tiles)
+  render.draw(self.gui)
+  render.draw(self.text)
+  render.draw(self.labels)
+  if self.width ~= width or self.height ~= height then
+    msg.post("main:/go#main", "native_viewport", {
+      width = WIDTH, height = HEIGHT, scale = scale,
+      window_width = width, window_height = height,
+    })
+    self.width, self.height = width, height
+  end
+end

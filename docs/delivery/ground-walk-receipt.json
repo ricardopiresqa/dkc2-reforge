@@ -1,0 +1,11 @@
+{
+  "scope": "Pirate Panic initial ground walk, five quantized sprite-origin checkpoints only",
+  "status": "PASS",
+  "tolerance_pixels_per_axis": 1,
+  "tolerance_frames": 1,
+  "bundle": "dist/pirate-panic-ground-aligned",
+  "reference_sha256": "dffac614288b1d2a6e762ce11cf3756fc03e53786c75da6d3622f9eaab5c9f55",
+  "port_sha256": "bcdb60080cb31bd455ea65dd3358d5592756b9d83af72f5eb8f1f69cbfb16e8b",
+  "full_phase_fidelity": "NOT_PROVEN",
+  "excluded": ["subpixel simulation", "camera", "jump", "AI", "audio", "bonus", "full route"]
+}

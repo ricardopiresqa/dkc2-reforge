@@ -1,0 +1,17 @@
+{
+  "scope": "native logical viewport and motion regression, not full visual fidelity",
+  "status": "VERIFIED",
+  "bundle": "dist/pirate-panic-native-4x",
+  "runtime_frames": 220,
+  "logical_viewport": [256, 224],
+  "measured_window": [1024, 896],
+  "integer_scale": 4,
+  "render_errors": 0,
+  "pool_drops": 0,
+  "motion_checkpoint_status": "PASS",
+  "reference_sha256": "f56f8468c85c408cf21ed6f05f68ce955bb7f9e5e79dc8e9901e48292333131b",
+  "port_sha256": "90b1a8cbb7fd642eee5b72f8f66b7e0fab69fc7b25e28f5c78e8100ddec95010",
+  "visual_fidelity": "NOT_PROVEN",
+  "camera_hdma_color_math": "PENDING",
+  "hud": "prototype counters hidden; original HUD not implemented"
+}

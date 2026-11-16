@@ -1,0 +1,133 @@
+# ROMs (proprietary — never commit)
+roms/
+*.sfc
+*.smc
+*.fig
+*.rom
+
+# Local environment and credentials
+.env
+.env.*
+!.env.example
+
+# Raw extracted assets (proprietary — never commit)
+assets-raw/
+
+# Defold build artifacts
+.internal/
+build/
+*.projectc
+*.collectionc
+*.input_bindingc
+*.atlas
+*.texturesetc
+*.a
+*.o
+*.so
+.dmengine*
+dmengine*
+
+# Python environment
+venv/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.pytest_cache/
+.tox/
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Distribution packages
+dist/
+
+# Logs / dumps — keep only if small and hand-curated
+*.log
+dump-*.bin
+
+# Protected external resources (do not commit source)
+tools/vendor/
+tools/native-build-screenshot/
+outputs/
+
+# JDK and tool binaries (re-downloadable)
+tools/jdk-*/
+tools/bin/*
+/bob.jar
+
+# Generated assets (can be regenerated)
+samples/
+assets/images/gen/
+assets/images/pirate/
+assets/music/pirate/
+assets/sfx/pirate/
+main/game.atlas
+
+# Generated local archive signing material; never stage private keys.
+/manifest.private.der
+/manifest.public.der
+/dkc2_save.dat
+
+# Pre-built tools binaries (re-downloadable)
+tools/bin/Mesen2/
+tools/bin/bsnes-plus/
+tools/bin/Ghidra/
+tools/bin/DiztinGUIsh/
+
+# Dados derivados da ROM: nunca versionar (constitution, regra 1)
+samples/gfx_png/
+samples/pac1_extracted/
+/.editor_settings
+/.internal
+/build
+
+# ROM-derived snapshots and machine-local OpenCode state
+/data/original/
+/.opencode/
+
+# Stray PowerShell output file; keep local, never publish
+/$null
+/_err.txt
+
+# Local telemetry and temporary analysis scripts
+/${CEREBRO_VAULT_PATH}/
+/__temp*.py
+/tools/tmp_romscan.py
+tools/analysis/_tmp*.py
+
+# ROM-derived analysis outputs (reproducible only with local ROM inputs)
+tools/analysis/samples/
+tools/analysis/rom-map.json
+tools/analysis/rom-map.md
+tools/analysis/_wram_map.md
+tools/analysis/_disasm*.txt
+tools/analysis/_boot_disasm*.txt
+tools/analysis/_handler_disasms.txt
+tools/analysis/analyze_output*.txt
+tools/analysis/extract_clean.txt
+tools/analysis/extract_output.txt
+
+# Full disassembly, pseudocode, ROM maps, and proprietary system font
+/_disasm_all.txt
+/docs/rom-map.json
+/docs/rom-map.md
+/docs/pseudocode/
+/tools/disassembly/export/
+/main/fonts/arial.ttf
+
+# Machine-local: agent governance state, Ghidra project DBs, ROM paths
+/.thoth/
+tools/ghidra-import/*.rep/
+tools/ghidra-import/*.gpr
+tools/analysis/check_roms.py
+/_test_rom_offset.py

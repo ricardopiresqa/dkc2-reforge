@@ -1,0 +1,10 @@
+/tools
+/assets-raw
+/roms
+/samples
+/dist
+/venv
+/docs
+/manifest.private.der
+/manifest.public.der
+/dkc2_save.dat

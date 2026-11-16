@@ -1,0 +1,32 @@
+local game = require("main.game")
+local input = require("main.input")
+local perf = require("main.perf")
+local qa_capture = require("main.qa_capture")
+
+function init(self)
+  qa_capture.init()
+  msg.post(".", "acquire_input_focus")
+  game.init()
+end
+
+function final(self)
+end
+
+function update(self, dt)
+  local started = os.clock()
+  input.update()
+  game.update(dt)
+  qa_capture.after_update(game.frame_index)
+  perf.note_cpu(os.clock() - started)
+end
+
+function on_input(self, action_id, action)
+  game.on_input(action_id, action)
+end
+
+function on_message(self, message_id, message, sender)
+  if message_id == hash("native_viewport") then
+    game.viewport_info = message
+    require("main.dev_autopilot").viewport_info = message
+  end
+end

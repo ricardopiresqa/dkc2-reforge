@@ -1,0 +1,20 @@
+{
+  "bundle": "dist/pirate-panic-final-secure-current",
+  "auditor": "tools/replay-compare/audit_safe_bundle.py",
+  "status": "PASS",
+  "forbidden_index_strings": [],
+  "raw_tree_files": [],
+  "game_arci_sha256": "b155b78dfe780e3324791447d8bcf20a81a8c8f8bd6d1fdc58e0e62b61789559",
+  "game_arcd_sha256": "164ae48103bc739179caa26737f5191b87f46894391f9ccf2f597f932d90052f",
+  "native_engine_sha256": "d647fce903f664a1accad16591c9da7b424e1bf366e25fede7ddd97d6f4ef8f5",
+  "native_engine_source_commit": "5f3098e3bfc37e8f26bde9428436b4d4499d1d50",
+  "runtime": {
+    "exit_code": 0,
+    "frames": 220,
+    "input_check": true,
+    "screenshot_callbacks": 9,
+    "screenshot_pending": 0,
+    "render_errors": 0
+  },
+  "explicit_scope": "No raw ROM, VRAM/CGRAM snapshots, or private signing material in bundle. Game uses original-derived sprites/runtime Lua per owner request; no release or third-party distribution claim."
+}

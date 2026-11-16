@@ -1,0 +1,11 @@
+{
+  "scope": "Pirate Panic initial walking and first short jump, ten quantized sprite-origin checkpoints only",
+  "status": "PASS",
+  "tolerance_pixels_per_axis": 1,
+  "tolerance_frames": 1,
+  "bundle": "dist/pirate-panic-short-jump",
+  "reference_sha256": "f56f8468c85c408cf21ed6f05f68ce955bb7f9e5e79dc8e9901e48292333131b",
+  "port_sha256": "e17ef4056bb2a946e9a0de71ed33a0262a252b960154730e87de776e47725104",
+  "full_phase_fidelity": "NOT_PROVEN",
+  "excluded": ["camera", "animation timing", "long jump", "roll", "AI", "audio", "bonus", "full route"]
+}
